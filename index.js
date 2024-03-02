@@ -1,6 +1,6 @@
 //here I am going to create a function that will do everything i did for the green character and pine tree
 function newImage(url, left, bottom) { //these are the paramaters for this function
-let newImage = document.createElement('img') //this is creating an img
+const newImage = document.createElement('img') //this is creating an img
 newImage.src = url
 newImage.style.position = 'fixed'
 newImage.style.left = left + 'px' //here im saying that whatever i put in for 'left' will have 'px' added to it. aka making it b the desired amount of pixels
@@ -10,7 +10,7 @@ return newImage
 }
 
 function newItem(url, left, bottom) { //here im creating a function that creates a new item. i use my new image function inside of this function too
-    let object = newImage(url, left, bottom) //here i am "letting" newImage function be called object instead
+    const object = newImage(url, left, bottom) //here i am "letting" newImage function be called object instead
 
     object.addEventListener('dblclick', function () { //here is another function inside a function. im adding an event listener to the object so that it is user responsive
         object.remove()
